@@ -26,8 +26,14 @@ public class AutomationScript {
 		
 		
 		
-		driver.findElement(By.id("userid")).sendKeys("Sreejith");
+		driver.findElement(By.id("name")).sendKeys("Sreejith");
+		driver.findElement(By.id("mail")).sendKeys("sreejith49@live.com");
 		driver.findElement(By.id("password")).sendKeys("Sreejith");
+		driver.findElement(By.id("over_13")).click();
+		driver.findElement(By.xpath("//button[@type=\'submit\']")).click();
+		
+
+
 	}
 	
 	@AfterTest
