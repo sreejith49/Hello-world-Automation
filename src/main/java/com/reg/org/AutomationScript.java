@@ -3,6 +3,7 @@ package com.reg.org;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -30,13 +31,17 @@ public class AutomationScript {
 		driver.findElement(By.id("mail")).sendKeys("sreejith49@live.com");
 		driver.findElement(By.id("password")).sendKeys("Sreejith");
 		driver.findElement(By.id("over_13")).click();
+		driver.findElement(By.id("bio")).sendKeys("This is an automation test created for test execution in CI-CD mode");
+		Select selectRole = new Select(driver.findElement(By.id("job")));
+		selectRole.selectByVisibleText("Business Owner");
+		driver.findElement(By.id("business")).click();
 		driver.findElement(By.xpath("//button[@type=\'submit\']")).click();
 		
 
 
 	}
 	
-	@AfterTest
+	//@AfterTest
 	public void tearDown() {
 		driver.close();
 		driver.quit();
