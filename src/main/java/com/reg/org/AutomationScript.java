@@ -17,7 +17,7 @@ public class AutomationScript {
 		System.setProperty("webdriver.chrome.driver", "./resources/drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		
-		driver.navigate().to("http://192.168.0.4:8083/webapp");
+		driver.navigate().to("http://192.168.0.5:8083/webapp");
 		driver.manage().window().maximize();
 		
 	}
